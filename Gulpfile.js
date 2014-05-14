@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var less = require('gulp-less');
 var path = require('path');
 

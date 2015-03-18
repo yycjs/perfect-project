@@ -4,10 +4,11 @@ $(document).ready(function () {
   var socket;
   var username;
 
+
   $('form.login').on('submit', function (ev) {
     username = $('#username').val();
 
-    socket = io.connect('http://instaface.herokuapp.com', {
+    socket = io.connect('http://instaface.herokuapp.com/', {
       query: $.param({ username: username })
     });
 

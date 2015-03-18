@@ -7,7 +7,7 @@ $(document).ready(function () {
   $('form.login').on('submit', function (ev) {
     username = $('#username').val();
 
-    socket = io.connect('http://localhost:1337', {
+    socket = io.connect('http://instaface.herokuapp.com', {
       query: $.param({ username: username })
     });
 

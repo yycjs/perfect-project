@@ -1,0 +1,165 @@
+@import "variables";
+@import "mixins";
+@import "base";
+@import "font";
+
+*,
+*:after,
+*::before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 100;
+  min-height: 100%;
+  color: @grey;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+a, button {
+  color: @white;
+  background: none;
+  border: 1px solid @white;
+  padding: 5px;
+  .rounded(5px);
+
+  &:hover {
+    color: darken(@white, 10%);
+  }
+}
+
+
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: fadeout(@black, 20%);
+  z-index: 2000;
+  overflow: auto;
+  .transition(all, 0.3s);
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .modal-body {
+    width: 60%;
+    min-width: 340px;
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 40px;
+    background: @white;
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    video {
+      width: 100%;
+      border: 5px solid darken(@white, 10%);
+    }
+
+    button.btn {
+      font-size: 24px;
+      font-weight: 300;
+      background: @blue;
+      border: 1px solid @blue;
+      margin-top: 20px;
+      padding: 10px 20px;
+
+      &:hover {
+        background: darken(@blue, 10%);
+        border: 1px solid darken(@blue, 10%);
+      }
+    }
+  }
+}
+
+section.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: @blue;
+  border-bottom: 1px solid darken(@blue, 10%);
+
+  .logo {
+    height: 80px;
+    margin: 10px 20px;
+  }
+
+  a.btn, button {
+    margin: 25px 20px;
+    padding: 5px;
+    color: @white;
+    border: 1px solid @white;
+    .rounded(3px);
+
+    &:hover {
+      color: darken(@white, 15%);
+      border: 1px solid darken(@white, 15%);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .logo {
+      height: 60px;
+      margin: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      height: 40px;
+      margin: 30px 0 30px 10px;
+    }
+
+    .btn {
+      margin: 30px 10px;
+    }
+  }
+}
+
+section.photos {
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+
+  h1 {
+    color: @blue;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  .row {
+    padding: 20px;
+  }
+
+  img {
+    height: 60%;
+    width: 80%;
+    margin: 0 auto;
+    border: 3px solid darken(@white, 10%);
+    display: block;
+    .drop-shadow(0, 2px, 3px, 0.4);
+    background: solid darken(@white, 5%);
+  }
+}

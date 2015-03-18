@@ -1,0 +1,31 @@
+{
+  "name": "perfect-project",
+  "version": "1.0.0",
+  "description": "The perfect project",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "npm run jshint",
+    "jshint": "jshint lib/. --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yycjs/perfect-project.git"
+  },
+  "keywords": [
+    "yyc",
+    "yycjs"
+  ],
+  "author": "YYCJS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yycjs/perfect-project/issues"
+  },
+  "homepage": "https://github.com/yycjs/perfect-project",
+  "devDependencies": {
+    "jshint": "^2.6.3"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
